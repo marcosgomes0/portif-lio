@@ -23,7 +23,6 @@
   padding: 20px 0px;
   font-family: "roboto";
   font-size: 1.25rem;
-  font-weight: 400;
   text-decoration: none;
   color: var(--cor5);
 }
@@ -43,4 +42,33 @@
 .header-container h2 {
   font-size: 2.5rem;
   font-family: "roboto", sans-serif;
+}
+
+.menu-mobile {
+  display: grid;
+  gap: 6px;
+  padding: 22px;
+  display: none;
+  cursor: pointer;
+}
+.menu-mobile:hover{
+  background-color: #f0f0f0;
+}
+
+.menu-mobile> div {
+  width: 30px;
+  height: 3px;
+  background-color: var(--cor5);
+}
+
+@media (max-width: 800px){
+  .header-container{
+    justify-content: space-around;
+  }
+  .menu-mobile {
+    display: grid;
+  }
+  [aria-label="navegação primária"]{
+    display: none;
+  }
 }
