@@ -1,0 +1,46 @@
+.header-bg {
+  background-color: #fafafa;
+  border-bottom: 1px solid var(--cor2);
+  transition: 300ms;
+}
+
+.header-bg:hover {
+  border-color: var(--cor4);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-list {
+  display: flex;
+  gap: 40px;
+}
+
+.header-list li a {
+  padding: 20px 0px;
+  font-family: "roboto";
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--cor5);
+}
+
+.linhas {
+  max-width: 0px;
+  background-color: var(--cor2);
+  height: 2px;
+  transition: 0.3s;
+}
+
+.header-list li a:hover+.linhas {
+  max-width: 100%;
+  background-color: var(--cor7);
+}
+
+.header-container h2 {
+  font-size: 2.5rem;
+  font-family: "roboto", sans-serif;
+}
