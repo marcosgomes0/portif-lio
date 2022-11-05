@@ -3,6 +3,8 @@
 
 /* Página */
 @import "pagina/header.css";
+@import "pagina/intro.css";
+@import "pagina/apresentacao.css";
 
 /* Utilidades */
 @import "utilidades/tipografia.css";

@@ -1,0 +1,34 @@
+.apre-bg{
+  padding: 80px 0px 120px 0px;
+}
+.apre-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.apre-infos{
+  display: grid;
+  gap: 60px;
+}
+.apre-infos > p{
+  font-size: 1.5rem;
+  font-family: "poppins", sans-serif;
+}
+.curriculo{
+  justify-self: start;
+}
+.curriculo a{
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+.curriculo > div{
+  max-width: 0;
+  height: 3px;
+  background-color: var(--cor5);
+  transition: 0.3s;
+}
+.curriculo a:hover + div{
+  max-width: 100%;
+  background-color: var(--cor2);
+}

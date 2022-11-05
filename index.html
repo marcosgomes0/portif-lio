@@ -13,8 +13,44 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <style>
-
-
+    .projetos-bg {
+      padding: 80px 0px 120px 0px;
+    }
+    .projetos-bg > h2 {
+      padding-bottom: 60px;
+    }
+    .projetos-lista{
+      display: flex;
+      overflow: auto;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+      gap: 40px;
+    }
+    .projetos-lista li a > img{
+    max-width: 100%;
+    min-width: 250px;
+    }
+    .projetos-lista li a{
+    color: var(--cor1);
+    display: block;
+    }
+    .cards{
+      background-color: #202020;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cards > div{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .cards img{
+      width: 12px;
+    }
   </style>
 </head>
 
@@ -45,6 +81,63 @@
       </nav>
     </div>
   </header>
+
+  <main class="main-bg bgw">
+    <div class="main-conteudo">
+      <h1>Olá, sou <span class="cor3">Marcos</span><br> Desenvolvedor<br> Front-end</h1>
+      <p>SEJA BEM VINDO!</p>
+      <span>veja mais</span>
+    </div>
+  </main>
+
+  <section class="bgb apre-bg" id="apresentacao" aria-labelledby="perfil">
+    <div class="apre-container container">
+      <div class=apre-perfil>perfil</div>
+      <div class="apre-infos">
+        <h2 class="titulo2 cor4" id="perfil">Apresentação</h2>
+        <p class="cor2">Sou Marcos Gomes, estudante  autodidata de programação Front-end.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus minima unde, odio
+        </p>
+        <div class="curriculo">
+          <a class="cor3" href="#">currículo</a>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="projetos-bg" aria-labelledby="projetos">
+    <h2 id="projetos" class="titulo2 cor1 container">Projetos</h2>
+    <ul class="projetos-lista">
+      <li>
+        <a href="#">
+          <img src="img/costs.jpg" alt="costs">    
+          <div class="cards">
+            <div><span>Costs</span><img src="img/js (1).png" alt="js"></div>
+            <p>Projeto desenvolvido para simular uma aplicação Full-Stack</p>
+          </div>
+      </a>
+    </li>
+      <li>
+        <a href="#">
+          <img src="img/bikcraft.jpg" alt="bikcraft">
+          <div class="cards">
+            <span>bikcraft</span>
+            <p>Página da web desenvolvida no Curso de JavaScript ES6+</p>
+          </div>
+      </a>
+    </li>
+      <li><a href="#">
+          <img src="img/the-last.jpg" alt="the-last">      
+          <div class="cards">
+            <span>Expositor</span>
+            <p>Projeto em react, cujo objetivo é divulgar projetos artísticos</p>
+          </div>
+      </a>
+    </li>
+    </ul>
+  </section>
+
   <script src="script.js"></script>
 </body>
 
