@@ -1,0 +1,28 @@
+
+
+:root{
+  --cor1: #ffffff;
+  --cor2: #fafafa;
+  --cor3: #d5d5d5;
+  --cor4: #d9d9d9;
+  --cor5: #202020;
+  --cor6: #000000;
+  --cor7: #dc3333;
+}
+
+.bgw{
+  background-color: var(--cor2);
+}
+.bgb{
+  background-color: var(--cor5);
+}
+
+.cor1{
+  color: var(--cor5);
+}
+.cor2{
+  color: var(--cor4);
+}
+.cor3{
+  color: var(--cor7);
+}
