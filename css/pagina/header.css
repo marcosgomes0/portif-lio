@@ -48,17 +48,31 @@
   display: grid;
   gap: 6px;
   padding: 22px;
-  display: none;
   cursor: pointer;
+  display: none;
 }
+
+.line1.ativo{
+  transform: rotate(45deg) translate(8px, 7px);
+  background-color: var(--cor7);
+}
+.line2.ativo{
+  opacity: 0;
+}
+.line3.ativo{
+  transform: rotate(-45deg) translate(6px, -5px);
+  background-color: var(--cor7);
+}
+
 .menu-mobile:hover {
   background-color: #f0f0f0;
 }
 
-.menu-mobile .line {
+.menu-mobile > div {
   width: 30px;
   height: 3px;
   background-color: var(--cor5);
+  transition: 0.3s;
 }
 
 @media (max-width: 800px) {
@@ -100,3 +114,4 @@
 .navega.ativo{
   display: block;
 }
+

@@ -34,24 +34,6 @@
   color: var(--cor7);
   animation: seta 5s linear infinite;
 }
-@keyframes seta{
-  0%{
-    opacity: 0;
-    top: -100%;
-  }
-  30%{
-    opacity: 1;
-    top: 0%;
-  }
-  60%{
-    opacity: 1;
-    top: 0%;
-  }
-  100%{
-    opacity: 0;
-    top: 100%
-  }
-}
 
 @media (max-width: 800px) {
   .main-conteudo > h1 {
@@ -74,5 +56,24 @@
   }
   .main-conteudo > p {
     margin-bottom: 100px;
+  }
+}
+
+@keyframes seta{
+  0%{
+    opacity: 0;
+    top: -100%;
+  }
+  30%{
+    opacity: 1;
+    top: 0%;
+  }
+  60%{
+    opacity: 1;
+    top: 0%;
+  }
+  100%{
+    opacity: 0;
+    top: 100%
   }
 }
