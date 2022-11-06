@@ -32,3 +32,8 @@
   max-width: 100%;
   background-color: var(--cor2);
 }
+@media (max-width: 800px){
+  .apre-container{
+    grid-template-columns: 1fr;
+  }
+}
