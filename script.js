@@ -14,9 +14,11 @@ function toggleMenu() {
   })
 }
 
-["click", "touchstart"].forEach((eventos) => {
-  mobileMenu.addEventListener(eventos, toggleMenu);
-});
+// ["click", "touchstart"].forEach((eventos) => {
+//   mobileMenu.addEventListener(eventos, toggleMenu);
+// });
+
+mobileMenu.addEventListener('click', toggleMenu);
 
 function linkClick(e) {
   e.preventDefault()
