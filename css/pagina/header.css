@@ -72,3 +72,8 @@
     display: none;
   }
 }
+@media (max-width: 600px){
+  .header-container h2 {
+    font-size: 2rem;
+  }
+}

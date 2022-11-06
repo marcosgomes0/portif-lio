@@ -76,3 +76,17 @@
 .projetos-img img {
   width: 50px;
 }
+
+@media (max-width: 800px){
+.projetos-img h2 {
+  font-size: 3rem;
+}
+.projetos-img img {
+  width: 40px;
+}
+}
+@media (max-width: 600px){
+  .projetos-img img {
+    width: 30px;
+}
+}

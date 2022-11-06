@@ -36,4 +36,16 @@
   .apre-container{
     grid-template-columns: 1fr;
   }
+  .apre-infos > p{
+    font-size: 1.2rem;
+    font-family: "poppins", sans-serif;
+  }
+  .apre-infos > h2 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 600px){
+  .apre-bg{
+    padding: 80px 0px 80px 0px;
+  }
 }
