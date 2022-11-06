@@ -55,7 +55,7 @@
   background-color: #f0f0f0;
 }
 
-.menu-mobile > div {
+.menu-mobile .line {
   width: 30px;
   height: 3px;
   background-color: var(--cor5);
@@ -81,6 +81,7 @@
     box-sizing: border-box;
     display: none;
   }
+
   .header-list {
     flex-direction: column;
     align-items: center;
@@ -94,4 +95,8 @@
   .header-container h2 {
     font-size: 2rem;
   }
+}
+
+.navega.ativo{
+  display: block;
 }
