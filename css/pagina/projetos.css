@@ -1,0 +1,78 @@
+.projetos-bg {
+  padding: 80px 0px 120px 0px;
+  background-image: linear-gradient(to bottom, #202020 60%, #fafafa 40%);
+}
+
+.projetos-lista {
+  display: flex;
+  overflow: auto;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.projetos-lista li {
+  border-radius: 4px;
+  background-color: #202020;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  min-width: 270px;
+}
+
+.projetos-lista li:hover {
+  box-shadow: 8px 8px 6px rgba(0, 0, 0, 0.363);
+}
+
+.projetos-lista li a>img {
+  max-width: 100%;
+  border-radius: 4px 4px 0px 0px;
+}
+
+.projetos-lista li a {
+  display: block;
+}
+
+.cards {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: var(--cor2);
+}
+
+.cards>div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards span {
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+}
+
+.cards p {
+  font-family: "poppins", sans-serif;
+}
+
+.cards img {
+  width: 12px;
+}
+
+.projetos-img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.projetos-img>div {
+  display: flex;
+  gap: 20px;
+}
+
+.projetos-img img {
+  width: 50px;
+}

@@ -13,72 +13,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <style>
-    .projetos-bg {
-      padding: 80px 0px 120px 0px;
-      background-image: linear-gradient(to bottom, #202020 60%, #fafafa 40%);
-    }
+    
 
-    .projetos-bg>h2 {
-      padding-bottom: 60px;
-    }
-
-    .projetos-lista {
-      display: flex;
-      overflow: auto;
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 20px;
-      box-sizing: border-box;
-      gap: 40px;
-    }
-
-    .projetos-lista li {
-      border-radius: 4px;
-      background-color: #202020;
-      padding-bottom: 20px;
-      margin-bottom: 10px;
-      min-width: 270px;
-    }
-
-    .projetos-lista li:hover {
-      box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.5);
-    }
-
-    .projetos-lista li a>img {
-      max-width: 100%;
-      border-radius: 4px 4px 0px 0px;
-    }
-
-    .projetos-lista li a {
-      display: block;
-    }
-
-    .cards {
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      color: var(--cor2);
-    }
-
-    .cards>div {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .cards span {
-      font-family: "roboto", sans-serif;
-      font-weight: bold;
-    }
-
-    .cards p {
-      font-family: "poppins", sans-serif;
-    }
-
-    .cards img {
-      width: 12px;
-    }
   </style>
 </head>
 
@@ -135,13 +71,19 @@
   </section>
 
   <section class="projetos-bg" aria-labelledby="projetos">
-    <h2 id="projetos" class="titulo2 cor2 container">Projetos</h2>
+    <div class="projetos-img container">
+      <h2 id="projetos" class="titulo2 cor2">Projetos</h2>
+      <div>
+        <img src="img/React-icon.svg.png" alt="react">
+        <img src="img/javas.png" alt="js">
+      </div>
+    </div>
     <ul class="projetos-lista">
       <li>
         <a href="#">
           <img src="img/costs.jpg" alt="costs">
           <div class="cards">
-            <div><span>Costs</span><img src="img/js (1).png" alt="js"></div>
+            <div><span>Costs</span><img src="img/React-icon.svg.png" alt="react"></div>
             <p>Projeto desenvolvido para simular uma aplicação Full-Stack</p>
           </div>
         </a>
@@ -150,7 +92,7 @@
         <a href="#">
           <img src="img/bikcraft.jpg" alt="bikcraft">
           <div class="cards">
-            <div><span>bikcraft</span><img src="img/js (1).png" alt="js"></div>
+            <div><span>bikcraft</span><img src="img/javas.png" alt="js"></div>
             <p>Página da web desenvolvida no Curso de JavaScript ES6+</p>
           </div>
         </a>
@@ -158,7 +100,7 @@
       <li><a href="#">
           <img src="img/the-last.jpg" alt="the-last">
           <div class="cards">
-            <div><span>Expositor</span><img src="img/js (1).png" alt="js"></div>
+            <div><span>Expositor</span><img src="img/React-icon.svg.png" alt="js"></div>
             <p>Projeto em react, cujo objetivo é divulgar projetos artísticos</p>
           </div>
         </a>
