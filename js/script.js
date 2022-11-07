@@ -26,7 +26,7 @@ function initBurgerMenu() {
 initBurgerMenu();
 
 const slide = document.querySelector(".slide");
-const slideLista = document.querySelector('.slide-list')
+const slideLista = document.querySelector(".slide-list");
 
 const dist = {
   finalPosition: 0,
@@ -35,31 +35,43 @@ const dist = {
   moviment: 0,
 };
 
-function moveSlide(pos){
-  dist.moviPosition = pos
-  slideLista.style.transform = `translate3d(${pos}px, 0, 0)`
+function moveSlide(pos) {
+  dist.moviPosition = pos;
+  slideLista.style.transform = `translate3d(${pos}px, 0, 0)`;
 }
 
-function updatePosition(clientX){
-  const movimento = dist.startX - clientX
-  return dist.finalPosition - movimento
+function updatePosition(clientX) {
+  const movimento = (dist.startX - clientX) * 1.5;
+  return dist.finalPosition - movimento;
 }
 
 function onMove(e) {
-  const posição = updatePosition(e.clientX)
-  moveSlide(posição)
+  const pointerPosition =
+    e.type == "mousemove" ? e.clientX : e.changedTouches[0].clientX;
+  const posição = updatePosition(pointerPosition);
+  moveSlide(posição);
+  console.log(posição);
 }
 
 function onStart(e) {
-  e.preventDefault();
-  dist.startX = e.clientX
-  slide.addEventListener("mousemove", onMove);
+  const movetype = e.type == "mousedown" ? "mousemove" : "touchmove";
+  if (e.type == "mousedown") {
+    e.preventDefault();
+    dist.startX = e.clientX;
+  } else if (e.type == "touchstart") {
+    dist.startX = e.changedTouches[0].clientX;
+  }
+
+  slide.addEventListener(movetype, onMove);
 }
 
-function onEnd() {
-  slide.removeEventListener("mousemove", onMove);
-  dist.finalPosition = dist.moviPosition
+function onEnd(e) {
+  const movetype = e.type == "mouseup" ? "mousemove" : "touchmove";
+  slide.removeEventListener(movetype, onMove);
+  dist.finalPosition = dist.moviPosition;
 }
 
 slide.addEventListener("mousedown", onStart);
 slide.addEventListener("mouseup", onEnd);
+slide.addEventListener("touchstart", onStart);
+slide.addEventListener("touchend", onEnd);

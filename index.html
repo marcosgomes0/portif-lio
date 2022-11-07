@@ -33,7 +33,7 @@
       gap: 20px;
     }
 
-    .dg-icon>h2 {
+    .dg-icon {
       margin-bottom: 60px;
     }
 
@@ -51,6 +51,7 @@
       max-width: 800px;
       margin: 0 20px;
     }
+
     .slide-list li img {
       display: block;
       max-width: 100%;
@@ -58,6 +59,16 @@
 
     .slide {
       overflow: hidden;
+    }
+    @media (max-width: 800px){
+      .dg-icon>div>img {
+      width: 40px;
+    }
+    }
+    @media (max-width: 600px){
+      .dg-icon>div>img {
+      width: 30px;
+    }
     }
   </style>
 </head>
@@ -154,7 +165,6 @@
 
   <section aria-labelledby="design" class="design-bg bgw">
     <div class="dg-icon container">
-      <!--Criar um utilitário para projetos e design-->
       <h2 id="design" class="titulo2 cor1">Photoshop<span class="cor3">/</span>Design</h2>
       <div>
         <img src="img/photoshop (1).png" alt="">

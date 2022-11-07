@@ -78,9 +78,6 @@
 }
 
 @media (max-width: 800px){
-.projetos-img h2 {
-  font-size: 3rem;
-}
 .projetos-img img {
   width: 40px;
 }
