@@ -28,6 +28,7 @@ function initBurgerMenu() {
 
 initBurgerMenu();
 
+function initSlide(){
 const slide = document.querySelector(".slide");
 const slideLista = document.querySelector(".slide-list");
 
@@ -144,3 +145,28 @@ slide.addEventListener("mousedown", onStart);
 slide.addEventListener("mouseup", onEnd);
 slide.addEventListener("touchstart", onStart);
 slide.addEventListener("touchend", onEnd);
+}
+initSlide()
+
+function initScroll(){
+
+function scrollSuave(){
+  const id = this.getAttribute('href')
+  const tag = document.querySelector(id)
+  const altura = tag.getBoundingClientRect().top
+  window.scrollTo({
+    top: altura,
+    behavior: "smooth",
+  })
+}
+
+
+const links = document.querySelectorAll(".navega a")
+links.forEach((link)=>{
+  link.addEventListener('click', scrollSuave)
+
+
+})
+
+}
+initScroll()
