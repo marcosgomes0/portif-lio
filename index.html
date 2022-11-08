@@ -17,60 +17,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-  <style>
-    .design-bg {
-      padding: 0px 0px 60px 0px;
-    }
-
-    .dg-icon {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .dg-icon>div {
-      display: flex;
-      gap: 20px;
-    }
-
-    .dg-icon {
-      margin-bottom: 60px;
-    }
-
-    .dg-icon>div>img {
-      width: 50px;
-    }
-
-    .slide-list {
-      display: flex;
-    }
-
-    .slide-list li {
-      flex-shrink: 0;
-      width: 70vw;
-      max-width: 800px;
-      margin: 0 20px;
-    }
-
-    .slide-list li img {
-      display: block;
-      max-width: 100%;
-    }
-
-    .slide {
-      overflow: hidden;
-    }
-    @media (max-width: 800px){
-      .dg-icon>div>img {
-      width: 40px;
-    }
-    }
-    @media (max-width: 600px){
-      .dg-icon>div>img {
-      width: 30px;
-    }
-    }
-  </style>
 </head>
 
 <body>
@@ -110,10 +56,10 @@
   </main>
 
   <section class="bgb apre-bg" id="apresentacao" aria-labelledby="perfil">
-    <div class="apre-container container">
+    <div class="apre-container container fade">
       <div class=apre-perfil>perfil</div>
       <div class="apre-infos">
-        <h2 class="titulo2 cor4" id="perfil">Apresentação</h2>
+        <h2 class="cor4" id="perfil">Apresentação</h2>
         <p class="cor2">Sou Marcos Gomes, estudante autodidata de programação Front-end.
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus minima unde, odio
         </p>
@@ -126,45 +72,47 @@
   </section>
 
   <section class="projetos-bg" aria-labelledby="projetos/design" id="projetos" >
-    <div class="projetos-img container">
-      <h2 id="projetos/design" class="titulo2 cor4">Projetos</h2>
-      <div>
-        <img src="img/React-icon.svg.png" alt="react">
-        <img src="img/javas.png" alt="js">
+      <div class="fade">
+        <div class="projetos-img container">
+          <h2 id="projetos/design" class="titulo2 cor4">Projetos</h2>
+          <div>
+            <img src="img/React-icon.svg.png" alt="react">
+            <img src="img/javas.png" alt="js">
+          </div>
+        </div>
+        <ul class="projetos-lista">
+          <li>
+            <a href="#">
+              <img src="img/costs.jpg" alt="costs">
+              <div class="cards">
+                <div><span>Costs</span><img src="img/React-icon.svg.png" alt="react"></div>
+                <p>Projeto desenvolvido para simular uma aplicação Full-Stack</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="img/bikcraft.jpg" alt="bikcraft">
+              <div class="cards">
+                <div><span>bikcraft</span><img src="img/javas.png" alt="js"></div>
+                <p>Página da web desenvolvida no Curso de JavaScript ES6+</p>
+              </div>
+            </a>
+          </li>
+          <li><a href="#">
+              <img src="img/the-last.jpg" alt="the-last">
+              <div class="cards">
+                <div><span>Expositor</span><img src="img/React-icon.svg.png" alt="js"></div>
+                <p>Projeto em react, cujo objetivo é divulgar projetos artísticos</p>
+              </div>
+            </a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <ul class="projetos-lista">
-      <li>
-        <a href="#">
-          <img src="img/costs.jpg" alt="costs">
-          <div class="cards">
-            <div><span>Costs</span><img src="img/React-icon.svg.png" alt="react"></div>
-            <p>Projeto desenvolvido para simular uma aplicação Full-Stack</p>
-          </div>
-        </a>
-      </li>
-      <li>
-        <a href="#">
-          <img src="img/bikcraft.jpg" alt="bikcraft">
-          <div class="cards">
-            <div><span>bikcraft</span><img src="img/javas.png" alt="js"></div>
-            <p>Página da web desenvolvida no Curso de JavaScript ES6+</p>
-          </div>
-        </a>
-      </li>
-      <li><a href="#">
-          <img src="img/the-last.jpg" alt="the-last">
-          <div class="cards">
-            <div><span>Expositor</span><img src="img/React-icon.svg.png" alt="js"></div>
-            <p>Projeto em react, cujo objetivo é divulgar projetos artísticos</p>
-          </div>
-        </a>
-      </li>
-    </ul>
   </section>
 
-  <section aria-labelledby="design" class="design-bg bgw">
-    <div class="dg-icon container">
+  <section aria-labelledby="design" class="design-bg bgw fade">
+    <div class="dg-icon container fade">
       <h2 id="design" class="titulo2 cor1">Photoshop<span class="cor3">/</span>Design</h2>
       <div>
         <img src="img/photoshop (1).png" alt="">

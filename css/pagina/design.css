@@ -1,0 +1,49 @@
+.design-bg {
+  padding: 0px 0px 60px 0px;
+}
+
+.dg-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dg-icon>div {
+  display: flex;
+  gap: 20px;
+}
+
+.dg-icon>div>img {
+  width: 50px;
+}
+
+.slide-list {
+  display: flex;
+  margin-top: 60px;
+}
+
+.slide-list li {
+  flex-shrink: 0;
+  width: 70vw;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.slide-list li img {
+  display: block;
+  max-width: 100%;
+}
+
+.slide {
+  overflow: hidden;
+}
+@media (max-width: 800px){
+  .dg-icon>div>img {
+  width: 40px;
+}
+}
+@media (max-width: 600px){
+  .dg-icon>div>img {
+  width: 30px;
+}
+}

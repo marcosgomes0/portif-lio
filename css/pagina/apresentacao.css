@@ -32,6 +32,12 @@
   max-width: 100%;
   background-color: var(--cor2);
 }
+  .apre-infos > h2{
+  font-family: "roboto", sans-serif;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
 @media (max-width: 800px){
   .apre-container{
     grid-template-columns: 1fr;
@@ -47,5 +53,8 @@
 @media (max-width: 600px){
   .apre-bg{
     padding: 80px 0px 80px 0px;
+  }
+  .apre-infos > h2 {
+    font-size: 2rem;
   }
 }
