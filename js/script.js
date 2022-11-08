@@ -175,12 +175,6 @@ function initEnterAnimation() {
       }
     })
   }
-    // const apre = document.querySelector('.apre-container')
-    // const altura = apre.getBoundingClientRect().top - (window.innerHeight)*0.7
-    // if(altura < 0){
-    //   apre.classList.add('ativo')
-    // }
-    
 
   window.addEventListener("scroll", windowScroll);
 }
