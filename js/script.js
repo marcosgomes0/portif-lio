@@ -168,7 +168,7 @@ function initEnterAnimation() {
   
   function windowScroll() {
     sessões.forEach((sessão)=> {
-      const altura = sessão.getBoundingClientRect().top - (window.innerHeight) * 0.85
+      const altura = sessão.getBoundingClientRect().top - (window.innerHeight) * 0.88
       if(altura < 0){
         sessão.classList.add('ativo')
       }
