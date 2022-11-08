@@ -81,6 +81,9 @@
 .projetos-img img {
   width: 40px;
 }
+.projetos-bg {
+  padding: 60px 0px 100px 0px;
+}
 
 }
 @media (max-width: 600px){
