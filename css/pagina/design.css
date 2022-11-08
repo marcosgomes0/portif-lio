@@ -19,14 +19,20 @@
 
 .slide-list {
   display: flex;
-  margin-top: 60px;
+  margin-top: 60px;  
 }
+
 
 .slide-list li {
   flex-shrink: 0;
   width: 70vw;
   max-width: 800px;
   margin: 0 20px;
+  cursor: pointer;
+  border: 4px solid #fafafa;
+}
+.slide-list li:hover {
+  border: 4px solid #dc3333;
 }
 
 .slide-list li img {
@@ -35,6 +41,9 @@
 }
 
 .slide {
+  overflow: auto;
+}
+.js .slide{
   overflow: hidden;
 }
 @media (max-width: 800px){

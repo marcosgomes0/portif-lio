@@ -75,7 +75,7 @@ function initSlide() {
     moveSlide(activeSlide.position);
     dist.finalPosition = activeSlide.position;
   }
-  changeSlide(1);
+  changeSlide(0);
 
   function nextSlide() {
     if (slidePositions.next != undefined) {
@@ -179,3 +179,21 @@ function initEnterAnimation() {
 }
 
 initEnterAnimation();
+
+
+// function initAnimationBg(){
+//   const span = document.querySelector('.main-conteudo > h1 > span')
+//   const mainbg = document.querySelector('.main-bg')
+//   function changeBg(){
+//     mainbg.style.background = "#fafafa url('./img/bg.jpg') center center fixed"
+//     mainbg.style.transition = "1s"
+
+//   }
+//   function initialBg(){
+//     mainbg.style.backgroundImage = "initial"
+//     mainbg.style.transition = "initial"
+//   }
+//   span.addEventListener('mouseenter', changeBg)
+//   span.addEventListener('mouseout', initialBg)
+// }
+// initAnimationBg()
