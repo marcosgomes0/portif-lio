@@ -66,7 +66,7 @@ function initSlide() {
   }
 
   function slideTransition(active) {
-    slideLista.style.transition = active ? " 0.3s" : "";
+    slideLista.style.transition = active ? "0.3s" : "";
   }
 
   function changeSlide(index) {
@@ -154,7 +154,6 @@ function initScroll() {
   function scrollSuave() {
     const id = this.getAttribute("href");
     const tag = document.querySelector(id);
-    const altura = tag.getBoundingClientRect().top;
     tag.scrollIntoView({
       behavior: "smooth",
     });
