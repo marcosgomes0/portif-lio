@@ -71,11 +71,11 @@ function initSlide() {
 
   function changeSlide(index) {
     const activeSlide = arrayImg[index];
-    const scale = [...slideLista.children]
-    scale.forEach((item)=>{
-      item.classList.remove("ativo")
-    })
-    slideLista.children[index].classList.add('ativo')
+    const scale = [...slideLista.children];
+    scale.forEach((item) => {
+      item.classList.remove("ativo");
+    });
+    slideLista.children[index].classList.add("ativo");
     slideIndex(index);
     moveSlide(activeSlide.position);
     dist.finalPosition = activeSlide.position;
