@@ -66,11 +66,16 @@ function initSlide() {
   }
 
   function slideTransition(active) {
-    slideLista.style.transition = active ? "transform 0.3s" : "";
+    slideLista.style.transition = active ? " 0.3s" : "";
   }
 
   function changeSlide(index) {
     const activeSlide = arrayImg[index];
+    const scale = [...slideLista.children]
+    scale.forEach((item)=>{
+      item.classList.remove("ativo")
+    })
+    slideLista.children[index].classList.add('ativo')
     slideIndex(index);
     moveSlide(activeSlide.position);
     dist.finalPosition = activeSlide.position;
