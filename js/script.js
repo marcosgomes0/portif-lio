@@ -165,21 +165,20 @@ initScroll();
 function initEnterAnimation() {
   const sessões = document.querySelectorAll(".fade");
 
-  
   function windowScroll() {
-    sessões.forEach((sessão)=> {
-      const altura = sessão.getBoundingClientRect().top - (window.innerHeight) * 0.88
-      if(altura < 0){
-        sessão.classList.add('ativo')
+    sessões.forEach((sessão) => {
+      const altura =
+        sessão.getBoundingClientRect().top - window.innerHeight * 0.88;
+      if (altura < 0) {
+        sessão.classList.add("ativo");
       }
-    })
+    });
   }
 
   window.addEventListener("scroll", windowScroll);
 }
 
 initEnterAnimation();
-
 
 // function initAnimationBg(){
 //   const span = document.querySelector('.main-conteudo > h1 > span')

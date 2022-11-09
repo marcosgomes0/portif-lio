@@ -60,4 +60,8 @@
   .apre-infos > h2 {
     font-size: 2rem;
   }
+  .apre-bg .apre-container {
+    opacity: 1 !important;
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
 }
