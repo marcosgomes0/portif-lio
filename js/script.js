@@ -32,6 +32,7 @@ function initSlide() {
   const slide = document.querySelector(".slide");
   const slideLista = document.querySelector(".slide-list");
 
+
   const arrayImg = [...slideLista.children].map((element) => {
     const position = slidePosition(element);
     return {
@@ -123,6 +124,7 @@ function initSlide() {
   }
 
   function onStart(e) {
+
     slideTransition(false);
     const movetype = e.type == "mousedown" ? "mousemove" : "touchmove";
     if (e.type == "mousedown") {
