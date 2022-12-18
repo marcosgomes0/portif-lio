@@ -144,6 +144,7 @@
   border: 2px solid var(--cor2);
   border-radius: 0 0 4px 4px;
   display: none;
+  z-index: 4;
   animation: dropEnter 0.3s forwards;
 }
 @keyframes dropEnter{
@@ -154,12 +155,14 @@
     transform: translateY(0px);
   }
 }
-.drop-list li{
+.drop-list li a{
+  display: block;
   padding: 20px;
   font-family: 'poppins', Helvetica, sans-serif;
   cursor: pointer;
+  color: white;
 }
-.drop-list li:hover{
+.drop-list li a:hover{
   background-color: var(--cor2);
   color: var(--cor5);
 }

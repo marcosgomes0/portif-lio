@@ -15,11 +15,13 @@ function initBurgerMenu() {
   mobileMenu.addEventListener("click", toggleMenu);
 
   function linkClick(e) {
-    e.preventDefault();
+    if (e.currentTarget.getAttribute('href') == "#apresentacao" || e.currentTarget.getAttribute('href') == "#contato"){
+    e.preventDefault()
     mobileLista.classList.remove("ativo");
     linhas.forEach((linha) => {
       linha.classList.remove("ativo");
-    });
+    })}
+    
   }
   // Remoção do menu após o click em algum link
   linksMenu.forEach((link) => {
@@ -153,12 +155,16 @@ initSlide();
 
 // Função responsável pelo scroll suave dentro na página a partir do clik em um link no header
 function initScroll() {
-  function scrollSuave() {
-    const id = this.getAttribute("href");
-    const tag = document.querySelector(id);
-    tag.scrollIntoView({
-      behavior: "smooth",
-    });
+  function scrollSuave(e) {
+
+    if (e.currentTarget.getAttribute('href') == "#apresentacao" || e.currentTarget.getAttribute('href') == "#contato"){
+      const id = this.getAttribute("href");
+      const tag = document.querySelector(id);
+      tag.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  
   }
 
   const links = document.querySelectorAll(".navega a");
