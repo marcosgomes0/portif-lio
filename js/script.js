@@ -28,8 +28,7 @@ function initBurgerMenu() {
 }
 initBurgerMenu();
 
-
-// Função responsável pelo slide na sessão de design 
+// Função responsável pelo slide na sessão de design
 function initSlide() {
   const slide = document.querySelector(".slide");
   const slideLista = document.querySelector(".slide-list");
@@ -125,7 +124,6 @@ function initSlide() {
   }
 
   function onStart(e) {
-    console.log(e);
     slideTransition(false);
     const movetype = e.type == "mousedown" ? "mousemove" : "touchmove";
     if (e.type == "mousedown") {
@@ -188,7 +186,6 @@ function initEnterAnimation() {
 }
 initEnterAnimation();
 
-
 // função responsável pela navegação em tabs na parte da apresentação pessoal
 function nav() {
   const tabs = document.querySelectorAll(".tabs li");
@@ -203,7 +200,6 @@ function nav() {
     });
 
     e.currentTarget.classList.add("ativo");
-    console.log(e.currentTarget);
 
     tags.forEach((item) => {
       item.classList.remove("ativo");
@@ -216,7 +212,6 @@ function nav() {
   });
 }
 nav();
-
 
 // função responsável por fazer a seta aparecer indicando o ícone "behance"
 function seta() {
@@ -255,66 +250,103 @@ function dropMenu() {
 }
 dropMenu();
 
-
-function card3d(){
-
-const card = document.querySelector(".card");
-const container = document.querySelector(".container-3d");
-const coffeeImg = document.querySelector(".coffee > img");
-const circle = document.querySelector(".circle");
-const title = document.querySelector(".infos h1");
+// função de ativação do 3d do card na introdução do site
+function card3d() {
+  const card = document.querySelector(".card");
+  const container = document.querySelector(".container-3d");
+  const coffeeImg = document.querySelector(".coffee > img");
+  const circle = document.querySelector(".circle");
+  const title = document.querySelector(".infos h1");
 
   function removeMouseMove() {
-  container.removeEventListener("mousemove", cardMove);
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  card.style.transition = "all 0.5s ease";
-  circle.style.boxShadow = "none";
-  title.style.transform = "translateZ(0px)";
-  coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
-}
+    container.removeEventListener("mousemove", cardMove);
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    card.style.transition = "all 0.5s ease";
+    circle.style.boxShadow = "none";
+    title.style.transform = "translateZ(0px)";
+    coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
+  }
 
-function cardMove(e) {
-  let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
-  let yAxis = -(window.innerHeight / 2 - e.pageY) / 20;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-}
+  function cardMove(e) {
+    let xAxis = (window.innerWidth / 2 - e.pageX) / 22;
+    let yAxis = -(window.innerHeight / 2 - e.pageY) / 22;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  }
 
-function addMouseMove(e) {
-  container.addEventListener("mousemove", cardMove);
-  title.style.transform = "translateZ(100px)";
-  coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
-}
+  function addMouseMove(e) {
+    container.addEventListener("mousemove", cardMove);
+    title.style.transform = "translateZ(100px)";
+    coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
+  }
 
-container.addEventListener("click", addMouseMove);
-container.addEventListener("mouseleave", removeMouseMove);
-container.addEventListener("mouseenter", () => {
-  card.style.transition = "none";
-})
+  container.addEventListener("click", addMouseMove);
+  container.addEventListener("mouseleave", removeMouseMove);
+  container.addEventListener("mouseenter", () => {
+    card.style.transition = "none";
+  });
 
-function touchMove(e) {
-  let xAxis = (window.innerWidth / 2 - e.changedTouches[0].clientX) / 15;
-  let yAxis = -(window.innerHeight / 2 - e.changedTouches[0].clientY) / 15;
-  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
-}
+  function touchMove(e) {
+    let xAxis = (window.innerWidth / 2 - e.changedTouches[0].clientX) / 25;
+    let yAxis = -(window.innerHeight / 2 - e.changedTouches[0].clientY) / 25;
+    card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+  }
 
   function removeTouchMove() {
-  container.removeEventListener("touchmove", touchMove);
-  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
-  card.style.transition = "all 0.5s ease";
-  circle.style.boxShadow = "none";
-  title.style.transform = "translateZ(0px)";
-  coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
+    container.removeEventListener("touchmove", touchMove);
+    card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+    card.style.transition = "all 0.5s ease";
+    circle.style.boxShadow = "none";
+    title.style.transform = "translateZ(0px)";
+    coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
+  }
+
+  function addTouchMove(e) {
+    container.addEventListener("touchmove", touchMove);
+    title.style.transform = "translateZ(100px)";
+    coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
+    card.style.transition = "none";
+  }
+
+  container.addEventListener("touchstart", addTouchMove);
+  container.addEventListener("touchend", removeTouchMove);
 }
 
-function addTouchMove(e) {
-  container.addEventListener("touchmove", touchMove);
-  title.style.transform = "translateZ(100px)";
-  coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
+card3d();
+
+
+
+// Função responsável pela animação do título de entrada
+function animaText() {
+  const nome = document.querySelector(".animatedText");
+  let nomeAnimado = "SEJA BEM VINDO!";
+  let posicao = 0;
+  let time = 100;
+
+  setTimeout(() => {
+    change();
+    animaTexto();
+  }, 6000);
+
+  function change() {
+    nomeAnimado = "ESPERO QUE GOSTE!";
+    posicao = 0;
+    time = 150;
+  }
+
+  function animaTexto() {
+    let arrayNome = nomeAnimado.split("");
+    nome.innerHTML = "";
+
+    const timer = setInterval(() => {
+      nome.innerHTML += arrayNome[posicao];
+      posicao++;
+      if (posicao === nomeAnimado.length) {
+        clearInterval(timer);
+      }
+    }, time);
+  }
+
+  animaTexto();
 }
 
-container.addEventListener("touchstart", addTouchMove);
-container.addEventListener("touchend", removeTouchMove);
-
-}
-
-card3d()
+animaText();

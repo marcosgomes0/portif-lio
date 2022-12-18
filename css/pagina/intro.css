@@ -8,26 +8,21 @@
 }
 .infos h1 {
   font-size: 3rem;
-  font-family: "poppins", sans-serif;
+  font-family: "AudioWide", sans-serif;
   margin: 10px 0;
   position: relative;
-  transition: all .5s ease;
-
+  transition: all .5s ease-out;
 }
-.main-conteudo  h2 {
-  font-family: "poppins", sans-serif;
-  font-size: 1.5rem;
-  padding: 0 0 2rem 0;
-  margin-top: 10px;
-  transition: all .5s ease;
-}
-
 .main-conteudo  p {
-  font-size: 1.5rem;
-  font-family: "poppins", sans-serif;
-  font-weight: bold;
-  margin-bottom: 210px;
+  font-family: "roboto", sans-serif;
+  font-size: 1.2rem;
+  margin: 20px 0 10px 0;
+  line-height: 1.5;
 }
+.js .no-java{
+  display: none;
+}
+
 .main-conteudo{
   display: flex;
   align-items: center;
@@ -52,17 +47,31 @@
 }
 .coffee{
   transform-style: preserve-3d;
-  transition: all .5s ease;
+  transition: all .5s ease-out;
   min-width: 35vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.coffee::after{
+  content: '';
+  position: absolute;
+  left: 35%;
+  top: 80%;
+  transform: translate(-50%,-50%);
+  transform: translateZ(220px);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-image: url('../../img/coffee-beans.png');
+  background-size: cover;
+  transition: all .5s ease-out;
+}
 .coffee img{
   width: 200px;
   max-width: 100%;
   z-index: 2;
-  transition: all .5s ease;
+  transition: all .5s ease-out;
 }
 .infos{
   transform-style: preserve-3d;
@@ -82,7 +91,6 @@
   border-radius: 50%;
   position: absolute;
   z-index: 1;
-  transition: all .5s ease;
 }
 /* fim do 3D */
 

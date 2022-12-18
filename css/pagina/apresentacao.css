@@ -94,6 +94,8 @@
   color: #fafafa;
   font-family: 'roboto',Arial, Helvetica, sans-serif;
   line-height: 1.4;
+}
+.js .sobreMim{
   display: none;
 }
 .sobreMim p{
@@ -111,6 +113,8 @@
   color: #fafafa;
   font-family: 'roboto', Arial, Helvetica, sans-serif;
   line-height: 1.4;
+}
+.js .experiencia{
   display: none;
 }
 .experiencia span{
@@ -124,7 +128,7 @@
 .experiencia > div img{
   max-width: 30px;
 }
-.habilidades{
+.js .habilidades{
   display: none;
 }
 .habilidades p{
