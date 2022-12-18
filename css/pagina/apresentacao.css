@@ -1,67 +1,160 @@
-.apre-bg{
-  padding: 80px 0px 140px 0px;
+.apresentacao-bg{
+  padding: 80px 0;
 }
-.apre-container{
+.apresentacao-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.apre-infos{
-  display: grid;
+  grid-template-columns: auto 1fr;
   gap: 60px;
 }
-.apre-infos > p{
-  font-size: 1.5rem;
-  font-family: "poppins", sans-serif;
+.apresentacao-perfil{
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  align-self: start;
 }
-.curriculo{
-  justify-self: start;
+.perfil-foto{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 4px 4px 0px var(--cor7);
 }
-.curriculo a{
-  font-family: "roboto", sans-serif;
+.perfil-icons{
+  display: flex;
+  align-items: center;
+}
+.perfil-icons li{
+  cursor: pointer;
+}
+.perfil-icons li:nth-child(2) {
+  position: relative;
+}
+
+.perfil-icons li:nth-child(2).ativo::after {
+  content: '↑';
+  color: white;
+  position: absolute;
+  font-size: 1.2rem;
+  top:120%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  animation: behance 2s infinite;
+}
+
+@keyframes behance {
+  from{
+    transform: translateY(20px);
+  }
+  to{
+    transform: translateY(-10px);
+  }
+}
+
+.perfil-icons li:nth-child(3) img{
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-left: 6px;
+}
+.tabs{
+  display: flex;
+}
+.tabs li{
+  padding: 10px;
+  border: 2px solid white;
+  color: var(--cor2);
+  font-family: 'poppins', Arial, Helvetica, sans-serif;
   font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 5px;
+  cursor: pointer;
 }
-.curriculo > div{
-  max-width: 0;
-  height: 3px;
-  background-color: var(--cor5);
-  transition: 0.3s;
+.tabs li:nth-child(1){
+ border-radius: 4px 0 0 0;
 }
-.curriculo a:hover + div{
+.tabs li:nth-child(3){
+ border-radius: 0 4px 0 0;
+}
+.tabs li:hover,
+.tabs li:focus,
+.tabs li.ativo
+{
+  background-color: #fafafa;
+  color: var(--cor5);
+}
+.conteudo{
+  border: 2px solid white;
+  border-radius: 0 0 4px 4px;
+  min-height: 200px;
+  padding: 30px;
+}
+.sobreMim{
+  font-size: 1.2rem;
+  color: #fafafa;
+  font-family: 'roboto',Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  display: none;
+}
+.sobreMim p{
+  margin-bottom: 20px;
+}
+.sobreMim > div{
+  display: flex;
+  justify-content: end;
+}
+.sobreMim > div img{
+  max-width: 30px;
+}
+.experiencia{
+  font-size: 1.2rem;
+  color: #fafafa;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+  display: none;
+}
+.experiencia span{
+  color: #2196f3;
+}
+.experiencia > div{
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+.experiencia > div img{
+  max-width: 30px;
+}
+.habilidades{
+  display: none;
+}
+.habilidades p{
+  font-size: 1.2rem;
+  color: #fafafa;
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+.habilidades-icons{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+.habilidades-icons img{
   max-width: 100%;
-  background-color: var(--cor2);
+  width: 50px;
 }
-  .apre-infos > h2{
-  font-family: "roboto", sans-serif;
-  font-size: 3.5rem;
-  font-weight: bold;
+.sobreMim.ativo{
+  display: block;
+}
+.experiencia.ativo{
+  display: block;
+}
+.habilidades.ativo{
+  display: block;
 }
 
 @media (max-width: 800px){
-  .apre-container{
-    grid-template-columns: 1fr;
-  }
-  .apre-infos > p{
-    font-size: 1.2rem;
-    font-family: "poppins", sans-serif;
-  }
-  .apre-infos > h2 {
-    font-size: 3rem;
-  }
-  .apre-bg{
-    padding: 80px 0px 60px 0px;
-  }
+  .apresentacao-container{
+  grid-template-columns: 1fr;
 }
-@media (max-width: 600px){
-  .apre-bg{
-    padding: 80px 0px 40px 0px;
-  }
-  .apre-infos > h2 {
-    font-size: 2rem;
-  }
-  .apre-bg .apre-container {
-    opacity: 1 !important;
-    transform: translate3d(0px, 0px, 0px) !important;
-  }
 }

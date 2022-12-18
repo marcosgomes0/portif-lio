@@ -1,38 +1,111 @@
 .main-bg {
-  display: grid;
-  justify-items: center;
   padding: 160px 0px 30px 0px;
   text-align: center;
+  background-image: url('../../img/alisa-anton-FbRGK2rZs8g-unsplash\ \(1\).jpg');
+  background-attachment: fixed;
+  background-position: center bottom;
+  background-size: cover;
 }
-.main-conteudo > h1 {
-  font-size: 4.75rem;
-  font-family: "roboto", sans-serif;
-  font-style: italic;
-  margin-bottom: 60px;
+.infos h1 {
+  font-size: 3rem;
+  font-family: "poppins", sans-serif;
+  margin: 10px 0;
+  position: relative;
+  transition: all .5s ease;
+
+}
+.main-conteudo  h2 {
+  font-family: "poppins", sans-serif;
+  font-size: 1.5rem;
+  padding: 0 0 2rem 0;
+  margin-top: 10px;
+  transition: all .5s ease;
 }
 
-.main-conteudo > p {
+.main-conteudo  p {
   font-size: 1.5rem;
   font-family: "poppins", sans-serif;
   font-weight: bold;
   margin-bottom: 210px;
 }
-
-.main-conteudo > span {
-  font-family: "roboto", sans-serif;
-  font-size: 1.25rem;
-  position: relative;
+.main-conteudo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px
 }
 
-.main-conteudo > span::after {
-  content: ">";
+/* 3D */
+.container-3d{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card{
+  transform-style: preserve-3d;
+  width: 35rem;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4), 0 10px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 0 0rem;
+  background-color: white
+}
+.coffee{
+  transform-style: preserve-3d;
+  transition: all .5s ease;
+  min-width: 35vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coffee img{
+  width: 200px;
+  max-width: 100%;
+  z-index: 2;
+  transition: all .5s ease;
+}
+.infos{
+  transform-style: preserve-3d;
+}
+.infos > span{
+  margin-bottom: 10px;
+  font-size: 0.6rem;
+  font-family: 'poppins', sans-serif;
+  font-weight: bold;
+  display: inline-block;
+  color: var(--coffeColor);
+}
+.circle{
+  width: 15rem;
+  height: 15rem;
+  background-color: var(--coffeColor);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  transition: all .5s ease;
+}
+/* fim do 3D */
+
+.main-bg > span > a{
+  font-size: 1.25rem;
+  position: relative;
+  font-family: "roboto", Arial, Helvetica, sans-serif, sans-serif;
+  color: white;
+  background-color: rgba(0, 0, 0, .4);
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.main-bg > span > a::after {
+  content: "↓";
   position: absolute;
   top: 0;
   left: 100px;
-  transform: rotate(90deg);
-  color: var(--cor7);
+  color: white;
   animation: seta 5s linear infinite;
 }
+
+
 
 @media (max-width: 800px) {
   .main-conteudo > h1 {
@@ -44,18 +117,13 @@
 }
 
 @media (max-width: 600px) {
-  .main-conteudo > h1 {
+  .main-conteudo h1 {
     font-size: 2.5rem;
-  }
-  .main-conteudo > p {
-    font-size: 1rem;
   }
   .main-bg {
     padding: 100px 0px 30px 0px;
   }
-  .main-conteudo > p {
-    margin-bottom: 100px;
-  }
+
 }
 
 @keyframes seta{

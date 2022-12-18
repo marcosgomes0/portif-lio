@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favic" type="image/x-icon">
   <title>Currículo</title>
 
   <script>
@@ -12,13 +13,11 @@
   </script>
 
   <link rel="stylesheet" href="css/style.css">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
   <header class="header-bg">
     <div class="header-container container">
@@ -34,9 +33,15 @@
             <a href="#apresentacao">apresentação</a>
             <div class="linhas"></div>
           </li>
-          <li>
+          <li class="projeto-drop">
             <a href="#projetos">projetos</a>
             <div class="linhas"></div>
+            <ul class="drop-list">
+              <li>Costs</li>
+              <li>Dogs</li>
+              <li>Bikcraft</li>
+              <li>Caravan</li>
+            </ul>
           </li>
           <li>
             <a href="#contato">contato</a>
@@ -49,27 +54,76 @@
 
   <main class="main-bg bgw">
     <div class="main-conteudo">
-      <h1>Olá, sou <span class="cor3">Marcos</span><br> Desenvolvedor<br> Front-end</h1>
-      <p>SEJA BEM VINDO!</p>
-      <span><a class="cor1" href="#apresentacao">veja mais</a></span>
+      <div class="container-3d">
+        <div class="card">
+          <div class="coffee">
+            <div class="circle"></div>
+            <img src="img/coffe-marcos.png" alt="café 3d">
+          </div>
+          <div class="infos">
+            <h1>SEJA BEM VINDO</h1>
+            <h2>Meu nome é Marcos Gomes, desenvolver Front-End</h2>
+            <span>NO PLUGIN</span>
+          </div>
+        </div>
+      </div>
     </div>
+    <span><a class="cor1" href="#apresentacao">veja mais</a></span>
   </main>
 
-  <section class="bgb apre-bg" id="apresentacao" aria-labelledby="perfil">
-    <div class="apre-container container fade">
-      <div class=apre-perfil>perfil</div>
-      <div class="apre-infos">
-        <h2 class="cor4" id="perfil">Apresentação</h2>
-        <p class="cor2">Sou Marcos Gomes, estudante autodidata de programação Front-end.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum possimus minima unde, odio
-        </p>
-        <div class="curriculo">
-          <a class="cor3" href="#">currículo</a>
-          <div></div>
+  <section class="apresentacao-bg bgb" id="apresentacao">
+    <div class="apresentacao-container">
+      <div class="apresentacao-perfil">
+        <div class="perfil-foto"></div>
+        <ul class="perfil-icons">
+          <li><a href=""><img src="img/linkedin.svg" alt="linkedin"></a></li>
+          <li><a href="https://www.behance.net/marcosgomes27"><img src="img/behance.svg" alt="behance"></a></li>
+          <li><a href="https://github.com/marcosgomes0"><img src="img/github0.svg" alt="behance"></a></li>
+        </ul>
+      </div>
+      <div class="apresentacao-conteudo">
+        <ul class="tabs">
+          <li data-target="sobreMim" class="ativo">Sobre mim</li>
+          <li data-target="experiencia">Experiência</li>
+          <li data-target="habilidades">Habilidades</li>
+        </ul>
+        <div class="conteudo">
+          <div class="sobreMim ativo" id="sobreMim"> 
+            <p>Desde já, agradeço pela visita ao meu site. Meu nome é Marcos Gomes, estudande em tempo integral de progração Front-end. Sou apaixonado por tecnologias, então decidir tomar uma atitude e mergulhar de fato no universo da programação. Logo de cara me identifiquei com o Front, já que tenho expêriencia com design gráfico, e venho me aprofundando cada vez mais na área, aprendendo Frameworks, CSS moderno e aplicações com JS puro.</p>
+           <p>Nesse momento estou em busca da minha primeira oportunidade de emprego na área, então, aproveite para dar uma olhada nas minhas habilidades no item a seguir e logo abaixo veja os projetos que consigo desenvolver.</p>
+           <div><img src="img/coffee.png" alt="café icon"></div>
+          </div>
+          <div class="experiencia" id="experiencia">
+            No mundo da programação front-end ainda não tive oportunidades de desenvolver projetos profissionais, seja para um empresa ou freelancer, desenvolvi apenas alguns pequenos projetos para amigos e projetos de estudo. Minha maior experiência é como design gráfico freelancer, desenvolvendo desde projetos estáticos até motions designs para alguns clientes. Clicando no item "<span class="arrow">Be</span>" abaixo da minha foto será possível acessar o meu Behance para saber mais.
+            <div><img src="img/coffee.png" alt="café icon"></div>
+          </div> 
+          <div class="habilidades" id="habilidades">
+            <p>Ao longo dos meus estudos no mundo do Front-end 
+              aprendi diversas habilidades e tecnologias, desde as
+              linguagens de marcação como HTML e CSS, seguindo
+              para o JavaScript até o React. Posteriormente, busquei
+              expandir meus conhecimentos criando aplicações com 
+              CSS moderno, utilizando Sass e Bootstrap, e mais 
+              recentemente estou aprendendo PHP básico visando
+              a construção de sites e API’s Wordpress.</p>  
+              <ul class="habilidades-icons">
+                <li><img src="img/html-5.png" alt="html icon"></li>     
+                <li><img src="img/css-3.png" alt="css icon"></li>
+                <li><img src="img/js.png" alt="js icon"></li>
+                <li><img src="img/react.png" alt="react icon"></li>
+                <li><img src="img/sass.png" alt="sass icon"></li>
+                <li><img src="img/bootstrap.png" alt="bootstrap icon"></li>
+                <li><img src="img/wordpress.svg" alt="wordpress icon"></li>
+              </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <script>
+
+  </script>
 
   <section class="projetos-bg" aria-labelledby="projetos/design" id="projetos">
     <div class="fade">
@@ -90,6 +144,14 @@
             </div>
           </a>
         </li>
+        <li><a href="#">
+          <img src="img/dogs.jpg" alt="dogs">
+          <div class="cards">
+            <div><span>Dogs</span><img src="img/React-icon.svg.png" alt="js"></div>
+            <p>Projeto de uma rede social para cachorro que consome uma rest API</p>
+          </div>
+        </a>
+      </li>
         <li>
           <a href="#">
             <img src="img/bikcraft.jpg" alt="bikcraft">
@@ -100,13 +162,13 @@
           </a>
         </li>
         <li><a href="#">
-            <img src="img/the-last.jpg" alt="the-last">
-            <div class="cards">
-              <div><span>Expositor</span><img src="img/React-icon.svg.png" alt="js"></div>
-              <p>Projeto em react, cujo objetivo é divulgar projetos artísticos</p>
-            </div>
-          </a>
-        </li>
+          <img src="img/caravan.jpg" alt="caravan">
+          <div class="cards">
+            <div><span>Caravan</span><img src="img/bootstrap.png" alt="bootstrap"></div>
+            <p>Projeto de website construído a partir do Framework Bootstrap</p>
+          </div>
+        </a>
+      </li>
       </ul>
     </div>
   </section>
@@ -115,8 +177,8 @@
     <div class="dg-icon container fade">
       <h2 id="design" class="titulo2 cor1">Photoshop<span class="cor3">/</span>Design</h2>
       <div>
-        <img src="img/photoshop (1).png" alt="">
-        <img src="img/image-editing (1).png" alt="">
+        <img src="img/behance.svg" alt="behance icon">
+        <img src="img/photoshop.png" alt="photoshop icon">
       </div>
     </div>
     <div class="slide">
@@ -134,10 +196,12 @@
   <footer class="footer-bg bgb cor2" id="contato">
     <p>Email: marcosmuriloribeirogomes@gmail.com</p>
     <div class="footer-img">
-      <a href="#"><img src="img/gitwhite.png" alt=""></a>
-      <a href="#"><img src="img/linkwhite.png" alt=""></a>
+      <a href="#"><img src="img/gitwhite.png" alt="github white icon"></a>
+      <a href="#"><img src="img/linkwhite.png" alt="linkedin white icon"></a>
     </div>
   </footer>
+
+  <div></div>
 
   <script src="js/script.js"></script>
 </body>

@@ -28,7 +28,7 @@
 
 .header-list li a {
   padding: 20px 0px;
-  font-family: "roboto";
+  font-family: "roboto", Arial, Helvetica, sans-serif;
   font-size: 1.25rem;
   text-decoration: none;
   color: var(--cor5);
@@ -104,8 +104,8 @@
     padding: 0px 20px;
     box-sizing: border-box;
     display: none;
+    z-index: 3;
   }
-
   .js .header-list {
     flex-direction: column;
     align-items: center;
@@ -129,5 +129,40 @@
 }
 
 .navega.ativo {
+  display: block;
+}
+
+.projeto-drop{
+  position: relative;
+}
+
+.drop-list{
+  position: absolute;
+  background-color: var(--cor5);
+  color: white;
+  left: -18px;
+  border: 2px solid var(--cor2);
+  border-radius: 0 0 4px 4px;
+  display: none;
+  animation: dropEnter 0.3s forwards;
+}
+@keyframes dropEnter{
+  from{
+    transform: translateY(-10px);
+  }
+  to{
+    transform: translateY(0px);
+  }
+}
+.drop-list li{
+  padding: 20px;
+  font-family: 'poppins', Helvetica, sans-serif;
+  cursor: pointer;
+}
+.drop-list li:hover{
+  background-color: var(--cor2);
+  color: var(--cor5);
+}
+.drop-list.ativo{
   display: block;
 }

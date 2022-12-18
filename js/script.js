@@ -1,3 +1,4 @@
+// Função responsável pelo funcionamento do menu hamburguer
 function initBurgerMenu() {
   const linksMenu = document.querySelectorAll(".header-list a");
   const mobileMenu = document.querySelector(".menu-mobile");
@@ -25,13 +26,13 @@ function initBurgerMenu() {
     link.addEventListener("click", linkClick);
   });
 }
-
 initBurgerMenu();
 
+
+// Função responsável pelo slide na sessão de design 
 function initSlide() {
   const slide = document.querySelector(".slide");
   const slideLista = document.querySelector(".slide-list");
-
 
   const arrayImg = [...slideLista.children].map((element) => {
     const position = slidePosition(element);
@@ -81,7 +82,7 @@ function initSlide() {
     moveSlide(activeSlide.position);
     dist.finalPosition = activeSlide.position;
   }
-  changeSlide(0);
+  changeSlide(1);
 
   function nextSlide() {
     if (slidePositions.next != undefined) {
@@ -124,7 +125,7 @@ function initSlide() {
   }
 
   function onStart(e) {
-
+    console.log(e);
     slideTransition(false);
     const movetype = e.type == "mousedown" ? "mousemove" : "touchmove";
     if (e.type == "mousedown") {
@@ -152,6 +153,7 @@ function initSlide() {
 }
 initSlide();
 
+// Função responsável pelo scroll suave dentro na página a partir do clik em um link no header
 function initScroll() {
   function scrollSuave() {
     const id = this.getAttribute("href");
@@ -168,6 +170,7 @@ function initScroll() {
 }
 initScroll();
 
+// Adiciona um efeito de entrada a medida que é feito scroll pela página
 function initEnterAnimation() {
   const sessões = document.querySelectorAll(".fade");
 
@@ -183,22 +186,135 @@ function initEnterAnimation() {
 
   window.addEventListener("scroll", windowScroll);
 }
-
 initEnterAnimation();
 
-// function initAnimationBg(){
-//   const span = document.querySelector('.main-conteudo > h1 > span')
-//   const mainbg = document.querySelector('.main-bg')
-//   function changeBg(){
-//     mainbg.style.background = "#fafafa url('./img/bg.jpg') center center fixed"
-//     mainbg.style.transition = "1s"
 
-//   }
-//   function initialBg(){
-//     mainbg.style.backgroundImage = "initial"
-//     mainbg.style.transition = "initial"
-//   }
-//   span.addEventListener('mouseenter', changeBg)
-//   span.addEventListener('mouseout', initialBg)
-// }
-// initAnimationBg()
+// função responsável pela navegação em tabs na parte da apresentação pessoal
+function nav() {
+  const tabs = document.querySelectorAll(".tabs li");
+  const tags = document.querySelectorAll(".conteudo > div");
+
+  function handleTab(e) {
+    const data = e.currentTarget.getAttribute("data-target");
+    const tag = document.getElementById(data);
+
+    tabs.forEach((item) => {
+      item.classList.remove("ativo");
+    });
+
+    e.currentTarget.classList.add("ativo");
+    console.log(e.currentTarget);
+
+    tags.forEach((item) => {
+      item.classList.remove("ativo");
+    });
+    tag.classList.add("ativo");
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", handleTab);
+  });
+}
+nav();
+
+
+// função responsável por fazer a seta aparecer indicando o ícone "behance"
+function seta() {
+  const icons = document.querySelectorAll(".perfil-icons li");
+  const arrow = document.querySelector(".arrow");
+  const icon = icons[1];
+
+  function arrowOut() {
+    setTimeout(() => {
+      icon.classList.remove("ativo");
+    }, 1200);
+  }
+  function arrowActive() {
+    icon.classList.add("ativo");
+  }
+  arrow.addEventListener("mouseover", arrowActive);
+  arrow.addEventListener("mouseout", arrowOut);
+}
+seta();
+
+// Adiciona o drop-menu no header do projeto
+
+function dropMenu() {
+  const projeto = document.querySelector(".projeto-drop");
+  const drop = document.querySelector(".drop-list");
+
+  function closeNav() {
+    drop.classList.remove("ativo");
+  }
+  function navProject() {
+    drop.classList.add("ativo");
+  }
+  projeto.addEventListener("mouseover", navProject);
+  projeto.addEventListener("mouseout", closeNav);
+  projeto.addEventListener("click", closeNav);
+}
+dropMenu();
+
+
+function card3d(){
+
+const card = document.querySelector(".card");
+const container = document.querySelector(".container-3d");
+const coffeeImg = document.querySelector(".coffee > img");
+const circle = document.querySelector(".circle");
+const title = document.querySelector(".infos h1");
+
+  function removeMouseMove() {
+  container.removeEventListener("mousemove", cardMove);
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  card.style.transition = "all 0.5s ease";
+  circle.style.boxShadow = "none";
+  title.style.transform = "translateZ(0px)";
+  coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
+}
+
+function cardMove(e) {
+  let xAxis = (window.innerWidth / 2 - e.pageX) / 20;
+  let yAxis = -(window.innerHeight / 2 - e.pageY) / 20;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+}
+
+function addMouseMove(e) {
+  container.addEventListener("mousemove", cardMove);
+  title.style.transform = "translateZ(100px)";
+  coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
+}
+
+container.addEventListener("click", addMouseMove);
+container.addEventListener("mouseleave", removeMouseMove);
+container.addEventListener("mouseenter", () => {
+  card.style.transition = "none";
+})
+
+function touchMove(e) {
+  let xAxis = (window.innerWidth / 2 - e.changedTouches[0].clientX) / 15;
+  let yAxis = -(window.innerHeight / 2 - e.changedTouches[0].clientY) / 15;
+  card.style.transform = `rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+}
+
+  function removeTouchMove() {
+  container.removeEventListener("touchmove", touchMove);
+  card.style.transform = `rotateY(0deg) rotateX(0deg)`;
+  card.style.transition = "all 0.5s ease";
+  circle.style.boxShadow = "none";
+  title.style.transform = "translateZ(0px)";
+  coffeeImg.style.transform = "translateZ(0px) rotateZ(0deg)";
+}
+
+function addTouchMove(e) {
+  container.addEventListener("touchmove", touchMove);
+  title.style.transform = "translateZ(100px)";
+  coffeeImg.style.transform = "translateZ(200px) rotateZ(45deg)";
+}
+
+container.addEventListener("touchstart", addTouchMove);
+container.addEventListener("touchend", removeTouchMove);
+
+}
+
+card3d()
