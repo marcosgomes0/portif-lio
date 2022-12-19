@@ -15,13 +15,17 @@ function initBurgerMenu() {
   mobileMenu.addEventListener("click", toggleMenu);
 
   function linkClick(e) {
-    if (e.currentTarget.getAttribute('href') == "#apresentacao" || e.currentTarget.getAttribute('href') == "#contato"){
-    e.preventDefault()
-    mobileLista.classList.remove("ativo");
-    linhas.forEach((linha) => {
-      linha.classList.remove("ativo");
-    })}
-    
+    if (
+      e.target.getAttribute("href") == "#apresentacao" ||
+      e.target.getAttribute("href") == "#contato" ||
+      e.target.getAttribute("href") == "#projetos"
+    ) {
+      e.preventDefault();
+      mobileLista.classList.remove("ativo");
+      linhas.forEach((linha) => {
+        linha.classList.remove("ativo");
+      });
+    }
   }
   // Remoção do menu após o click em algum link
   linksMenu.forEach((link) => {
@@ -156,15 +160,18 @@ initSlide();
 // Função responsável pelo scroll suave dentro na página a partir do clik em um link no header
 function initScroll() {
   function scrollSuave(e) {
-
-    if (e.currentTarget.getAttribute('href') == "#apresentacao" || e.currentTarget.getAttribute('href') == "#contato"){
+    console.log(e.target.getAttribute("href"));
+    if (
+      e.target.getAttribute("href") == "#apresentacao" ||
+      e.target.getAttribute("href") == "#contato" ||
+      e.target.getAttribute("href") == "#projetos"
+    ) {
       const id = this.getAttribute("href");
       const tag = document.querySelector(id);
       tag.scrollIntoView({
         behavior: "smooth",
       });
     }
-  
   }
 
   const links = document.querySelectorAll(".navega a");
@@ -318,8 +325,6 @@ function card3d() {
 }
 
 card3d();
-
-
 
 // Função responsável pela animação do título de entrada
 function animaText() {
