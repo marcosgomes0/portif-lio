@@ -70,4 +70,9 @@
   .dg-icon > div > img {
     width: 30px;
   }
+  .slide-list li {
+    margin: 0;
+    scale: .9;
+    padding: 10px;
+  }
 }

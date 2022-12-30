@@ -12,7 +12,7 @@
   <script>
     document.documentElement.classList.add('js')
   </script>
-  
+
   <link rel="preload" href="css/style.min.css" as="style">
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -112,14 +112,14 @@
               recentemente estou aprendendo PHP básico visando
               a construção de sites e API’s Wordpress.</p>
             <ul class="habilidades-icons">
-              <li><img width="50"  height="50" src="img/html-5.png" alt="html icon"></li>
-              <li><img width="50"  height="50" src="img/css-3.png" alt="css icon"></li>
-              <li><img width="50"  height="50" src="img/js.png" alt="js icon"></li>
-              <li><img width="50"  height="50" src="img/react.png" alt="react icon"></li>
-              <li><img width="50"  height="50" src="img/sass.png" alt="sass icon"></li>
-              <li><img width="50"  height="50" src="img/bootstrap.png" alt="bootstrap icon"></li>
-              <li><img width="50"  height="50" src="img/wordpress.svg" alt="wordpress icon"></li>
-              <li><img width="50"  height="50" src="img/tailwind.svg" alt="tailwind icon"></li>
+              <li><img width="50" height="50" src="img/html-5.png" alt="html icon"></li>
+              <li><img width="50" height="50" src="img/css-3.png" alt="css icon"></li>
+              <li><img width="50" height="50" src="img/js.png" alt="js icon"></li>
+              <li><img width="50" height="50" src="img/react.png" alt="react icon"></li>
+              <li><img width="50" height="50" src="img/sass.png" alt="sass icon"></li>
+              <li><img width="50" height="50" src="img/bootstrap.png" alt="bootstrap icon"></li>
+              <li><img width="50" height="50" src="img/wordpress.svg" alt="wordpress icon"></li>
+              <li><img width="50" height="50" src="img/tailwind.svg" alt="tailwind icon"></li>
             </ul>
           </div>
         </div>
@@ -176,13 +176,15 @@
           </a>
         </li>
         <li><a href="https://github.com/marcosgomes0/movies-catalog">
-          <img width="585" height="471" src="img/catalog.jpg" alt="catalog">
-          <div class="cards">
-            <div><span>Movies/Catalog</span><div><img width="10" height="10" src="img/react.png" alt="react icon"><img width="10" height="10" src="img/tailwind.svg" alt="react icon"></div></div>
-            <p>Projeto em react consumindo a API do TMBD e estilizado a partir do Tailwind.CSS</p>
-          </div>
-        </a>
-      </li>
+            <img width="585" height="471" src="img/catalog.jpg" alt="catalog">
+            <div class="cards">
+              <div><span>Movies/Catalog</span>
+                <div><img width="10" height="10" src="img/react.png" alt="react icon"><img width="10" height="10" src="img/tailwind.svg" alt="react icon"></div>
+              </div>
+              <p>Projeto em react consumindo a API do TMBD e estilizado a partir do Tailwind.CSS</p>
+            </div>
+          </a>
+        </li>
       </ul>
     </div>
   </section>
@@ -197,11 +199,48 @@
     </div>
     <div class="slide">
       <ul class="slide-list">
-        <li><img width="600" height="600px" src="img/spookyjs.jpg" alt="fantasma"></li>
-        <li><img width="600" height="600px" src="img/cabecajs.jpg" alt="cabeça"></li>
-        <li><img width="600" height="600px" src="img/joeljs.jpg" alt="lastofus"></li>
-        <li><img width="600" height="600px" src="img/cogujs.jpg" alt="cogumelo"></li>
-        <li><img width="600" height="600px" src="img/katjs.jpg" alt="gato-borboleta"></li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/cogumin.jpg">
+            <img width="600" height="600px" src="img/cogus.jpg" alt="cogumelo">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/burteflymin.jpg">
+            <img width="600" height="600px" src="img/burterflys.jpg" alt="gato-borboleta">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/revengemin.jpg">
+            <img width="600" height="600px" src="img/revenges.jpg" alt="revenge cat">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/joelmin.jpg">
+            <img width="600" height="600px" src="img/joels.jpg" alt="lastofus">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px )" srcset="img/ghostmin.jpg">
+            <img width="600" height="600px" src="img/ghosts.jpg" alt="fantasma">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/cabecamin.jpg">
+            <img width="600" height="600px" src="img/cabecas.jpg" alt="cabeça">
+          </picture>
+        </li>
+        <li>
+          <picture>
+            <source media="(max-width: 600px)" srcset="img/warmin.jpg">
+            <img width="600" height="600px" src="img/wars.jpg" alt="worlds of war cat">
+          </picture>
+        </li>
       </ul>
     </div>
 
