@@ -102,6 +102,21 @@
 .sobreMim p{
   margin-bottom: 20px;
 }
+.sobreMim  > span> a {
+  color: white;
+  text-transform: uppercase;
+}
+.sobreMim  > span > a::after{
+  display: block;
+  content: "";
+  background-color: var(--coffeColor);
+  width: 100%;
+  height: 3px;
+  border: none;
+}
+.sobreMim  > span > a:hover::after{
+  background-color: #837055;
+}
 .sobreMim > div{
   display: flex;
   justify-content: end;
